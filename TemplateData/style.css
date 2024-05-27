@@ -52,6 +52,16 @@ body {
     text-align: left;
     border: 1px solid white;
     padding: 2px;
+    position: absolute;
+    top: 80%;
+
+   
+}
+#chibbi{
+    position: absolute;
+    left: 83%;
+    top: 65%;
+    width: 10%;
 }
 #unity-progress-bar-full {
     width: 0%;
