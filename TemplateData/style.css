@@ -45,6 +45,16 @@ body {
 #unity-logo img {
     max-width: 80%;
 }
+
+#one{
+    width: 100%;
+    display: flex;
+    direction: column;
+    /* border-style: solid;
+    border-color: red; */
+    justify-items: end;
+    margin-top: 36%;
+}
 #unity-progress-bar-empty {
     width: 80%;
     height: 24px;
@@ -53,15 +63,25 @@ body {
     border: 1px solid white;
     padding: 2px;
     position: absolute;
-    top: 80%;
-
+    top: 90%;
+    /* display: flex;
+    direction: column; */
+    /* justify-items: end ; */
+    /* margin-top: 30%; */
+    /* align-items: end; */
    
 }
+
+
 #chibbi{
-    position: absolute;
-    left: 83%;
-    top: 65%;
-    width: 10%;
+    position: absolute; 
+     left: 82%; 
+     top: 63%;
+    /* bottom: 2%; */
+    /* display: flex;
+    direction: column; */
+    /* justify-items: end; */
+    width: 13%;
 }
 #unity-progress-bar-full {
     width: 0%;
