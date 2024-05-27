@@ -75,12 +75,8 @@ body {
 
 #chibbi{
     position: absolute; 
-     left: 82%; 
+     left: 5%; 
      top: 63%;
-    /* bottom: 2%; */
-    /* display: flex;
-    direction: column; */
-    /* justify-items: end; */
     width: 13%;
 }
 #unity-progress-bar-full {
