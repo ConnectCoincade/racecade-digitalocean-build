@@ -7,6 +7,7 @@
     <type fullname="AudioSourceTag" preserve="all" />
     <type fullname="BackTriggerScript" preserve="all" />
     <type fullname="Bomb" preserve="all" />
+    <type fullname="BossAttackTrigger" preserve="all" />
     <type fullname="Bulldozer" preserve="all" />
     <type fullname="CameraFollow" preserve="all" />
     <type fullname="CameraShake" preserve="all" />
