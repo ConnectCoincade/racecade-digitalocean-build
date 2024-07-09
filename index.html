@@ -3,7 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
     <title>RaceCade</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico" />
     <link rel="stylesheet" href="TemplateData/style.css" />
@@ -13,91 +16,81 @@
       <canvas id="unity-canvas"></canvas>
     </div>
     <div id="loading-cover" style="display: none">
-      <div id="one">
-        <div id="unity-loading-bar">
-          <div id="unity-logo"></div>
-          <div id="unity-progress-bar-empty" style="display: none">
-            <div id="unity-progress-bar-full"></div>
-          </div>
-          <div class="spinner"></div>
-          <img src="https://ipfs.filebase.io/ipfs/QmSv6KetqTL67YoLR2UdPqtfrFdZL9oM86cCfRaPNPbKUn" id="chibbi", style="display: none";/>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty" style="display: none">
+          <div id="unity-progress-bar-full"></div>
         </div>
+        <div class="spinner"></div>
       </div>
-      <div id="unity-fullscreen-button" style="display: none"></div>
     </div>
+    <div id="unity-fullscreen-button" style="display: none"></div>
     <script type="module">
-           const hideFullScreenButton = "";
+            const hideFullScreenButton = "";
             const buildUrl = "Build";
             const loaderUrl = buildUrl + "/d9d605cb1c18b4ed9fb179406f02ceab.loader.js";
             const config = {
-              dataUrl: buildUrl + "/fe7595751adeabad28e8187b3f35418f.data.unityweb",
-              frameworkUrl: buildUrl + "/dd427a36e81b720d97ecb713414e9bfe.framework.js.unityweb",
-              codeUrl: buildUrl + "/6f4b19b6d442805e82d815b7e593111c.wasm.unityweb",
+              dataUrl: buildUrl + "/f1529ef8485b563afe30a849101f7e92.data.unityweb",
+              frameworkUrl: buildUrl + "/b6bae21a33cc8b0471974562c7974241.framework.js.unityweb",
+              codeUrl: buildUrl + "/10e1dabd2beb1c303d87cfb1135663af.wasm.unityweb",
               streamingAssetsUrl: "StreamingAssets",
               companyName: "CoinCade",
               productName: "RaceCade",
               productVersion: "1.0",
             };
-      const container = document.querySelector("#unity-container");
-      const canvas = document.querySelector("#unity-canvas");
-      const loadingCover = document.querySelector("#loading-cover");
-      const progressBarEmpty = document.querySelector("#unity-progress-bar-empty");
-      const progressBarFull = document.querySelector("#unity-progress-bar-full");
-      const fullscreenButton = document.querySelector("#unity-fullscreen-button");
-      const spinner = document.querySelector('.spinner');
-      const chibbi = document.getElementById('chibbi');
-      
 
-      const canFullscreen = (function() {
-        for (const key of [
-          'exitFullscreen',
-          'webkitExitFullscreen',
-          'webkitCancelFullScreen',
-          'mozCancelFullScreen',
-          'msExitFullscreen',
-        ]) {
-          if (key in document) {
-            return true;
-          }
-        }
-        return false;
-      }());
+            const container = document.querySelector("#unity-container");
+            const canvas = document.querySelector("#unity-canvas");
+            const loadingCover = document.querySelector("#loading-cover");
+            const progressBarEmpty = document.querySelector("#unity-progress-bar-empty");
+            const progressBarFull = document.querySelector("#unity-progress-bar-full");
+            const fullscreenButton = document.querySelector("#unity-fullscreen-button");
+            const spinner = document.querySelector('.spinner');
 
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        container.className = "unity-mobile";
-        config.devicePixelRatio = 1;
-      }
-      loadingCover.style.display = "";
-      const script = document.createElement("script");
-      script.src = loaderUrl;
-
-      script.onload = () => {
-        import('./lib/thirdweb-unity-bridge.js').then(module => {
-          createUnityInstance(canvas, config, (progress) => {
-            spinner.style.display = "none";
-            progressBarEmpty.style.display = "";
-            progressBarFull.style.width = `${100 * progress}%`;
-
-            // Update chibbi position
-            if (progress > 0) {
-              chibbi.style.display = "block";
-            }
-          }).then((unityInstance) => {
-            loadingCover.style.display = "none";
-            if (canFullscreen) {
-              if (!hideFullScreenButton) {
-                fullscreenButton.style.display = "";
+            const canFullscreen = (function() {
+              for (const key of [
+                  'exitFullscreen',
+                  'webkitExitFullscreen',
+                  'webkitCancelFullScreen',
+                  'mozCancelFullScreen',
+                  'msExitFullscreen',
+                ]) {
+                if (key in document) {
+                  return true;
+                }
               }
-              fullscreenButton.onclick = () => {
-                unityInstance.SetFullscreen(1);
-              };
+              return false;
+            }());
+
+            if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+              container.className = "unity-mobile";
+              config.devicePixelRatio = 1;
             }
-          }).catch((message) => {
-            alert(message);
-          });
-        });
-      };
-      document.body.appendChild(script);
+            loadingCover.style.display = "";
+            const script = document.createElement("script");
+            script.src = loaderUrl;
+            script.onload = () => {
+              import('./lib/thirdweb-unity-bridge.js').then(module => {
+                createUnityInstance(canvas, config, (progress) => {
+                  spinner.style.display = "none";
+                  progressBarEmpty.style.display = "";
+                  progressBarFull.style.width = `${100 * progress}%`;
+                }).then((unityInstance) => {
+                  loadingCover.style.display = "none";
+                  if (canFullscreen) {
+                    if (!hideFullScreenButton) {
+                      fullscreenButton.style.display = "";
+                    }
+                    fullscreenButton.onclick = () => {
+                      unityInstance.SetFullscreen(1);
+                    };
+                  }
+                }).catch((message) => {
+                  alert(message);
+                });
+              });
+            };
+            document.body.appendChild(script);
     </script>
   </body>
 </html>
