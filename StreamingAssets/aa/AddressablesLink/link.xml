@@ -18,11 +18,14 @@
     <type fullname="CarInputDown" preserve="all" />
     <type fullname="CarInputUp" preserve="all" />
     <type fullname="CarStats" preserve="all" />
-    <type fullname="CFX_AutoDestructShuriken" preserve="all" />
-    <type fullname="CFX_LightIntensityFade" preserve="all" />
     <type fullname="ChildHandler" preserve="all" />
     <type fullname="CityBossAI" preserve="all" />
     <type fullname="Countdown" preserve="all" />
+<<<<<<< Updated upstream
+=======
+    <type fullname="DesertBossAI" preserve="all" />
+    <type fullname="DesertBossRocket" preserve="all" />
+>>>>>>> Stashed changes
     <type fullname="DesertGameEndAnimation" preserve="all" />
     <type fullname="DialogueManager" preserve="all" />
     <type fullname="DialogueTrigger" preserve="all" />
@@ -52,6 +55,10 @@
     <type fullname="RankManager" preserve="all" />
     <type fullname="Rocket" preserve="all" />
     <type fullname="RocketAI" preserve="all" />
+<<<<<<< Updated upstream
+=======
+    <type fullname="SpikeDrop" preserve="all" />
+>>>>>>> Stashed changes
     <type fullname="StaticObstacle" preserve="all" />
     <type fullname="SunController" preserve="all" />
     <type fullname="Tornado" preserve="all" />
@@ -64,10 +71,6 @@
     <type fullname="LevelDisplay" preserve="nothing" serialized="true" />
     <type fullname="ObjectiveDetails" preserve="nothing" serialized="true" />
     <type fullname="Ranking" preserve="nothing" serialized="true" />
-  </assembly>
-  <assembly fullname="CFXRRuntime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-    <type fullname="CartoonFX.CFXR_Effect" preserve="all" />
-    <type fullname="CartoonFX.CFXR_Effect/CameraShake" preserve="nothing" serialized="true" />
   </assembly>
   <assembly fullname="Unity.Addressables, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" preserve="all">
     <type fullname="UnityEngine.AddressableAssets.Addressables" preserve="all" />
@@ -114,6 +117,7 @@
     <type fullname="UnityEngine.GameObject" preserve="all" />
     <type fullname="UnityEngine.Light" preserve="all" />
     <type fullname="UnityEngine.Material" preserve="all" />
+    <type fullname="UnityEngine.MonoBehaviour" preserve="all" />
     <type fullname="UnityEngine.Object" preserve="all" />
     <type fullname="UnityEngine.RectTransform" preserve="all" />
     <type fullname="UnityEngine.Rendering.SortingGroup" preserve="all" />
