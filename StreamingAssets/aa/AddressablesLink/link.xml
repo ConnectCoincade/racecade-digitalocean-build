@@ -21,11 +21,8 @@
     <type fullname="ChildHandler" preserve="all" />
     <type fullname="CityBossAI" preserve="all" />
     <type fullname="Countdown" preserve="all" />
-<<<<<<< Updated upstream
-=======
     <type fullname="DesertBossAI" preserve="all" />
     <type fullname="DesertBossRocket" preserve="all" />
->>>>>>> Stashed changes
     <type fullname="DesertGameEndAnimation" preserve="all" />
     <type fullname="DialogueManager" preserve="all" />
     <type fullname="DialogueTrigger" preserve="all" />
@@ -55,10 +52,7 @@
     <type fullname="RankManager" preserve="all" />
     <type fullname="Rocket" preserve="all" />
     <type fullname="RocketAI" preserve="all" />
-<<<<<<< Updated upstream
-=======
     <type fullname="SpikeDrop" preserve="all" />
->>>>>>> Stashed changes
     <type fullname="StaticObstacle" preserve="all" />
     <type fullname="SunController" preserve="all" />
     <type fullname="Tornado" preserve="all" />
